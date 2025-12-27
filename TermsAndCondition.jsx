@@ -175,7 +175,23 @@ const TermsAndCondition = () => {
           </ul>
 
           <h4 className="text-lg font-semibold text-zinc-100 mb-3">
-            4.3 Price Changes
+            4.3 Additional Seats and PC Expansion
+          </h4>
+          <p className="text-zinc-300 mb-4">
+            If you need to add extra seats beyond the number of PCs defined in
+            your current subscription plan, additional costs will be charged per PC.
+            Please contact our support team at{" "}
+            <a
+              href="mailto:contact@rushbeegaming.com"
+              className="text-amber-400 hover:text-amber-300"
+            >
+              contact@rushbeegaming.com
+            </a>{" "}
+            to upgrade your subscription and obtain pricing for additional seats.
+          </p>
+
+          <h4 className="text-lg font-semibold text-zinc-100 mb-3">
+            4.4 Price Changes
           </h4>
           <p className="text-zinc-300">
             Subscription prices are subject to change annually, typically
@@ -415,6 +431,39 @@ const TermsAndCondition = () => {
               Critical bugs affecting operations will be prioritized
             </li>
           </ul>
+
+          <h4 className="text-lg font-semibold text-zinc-100 mb-3">
+            8.2 Game Content Disclaimer
+          </h4>
+          <p className="text-zinc-300">
+            Any games or applications added by the Owner in RushBee Cntrl and
+            displayed in RushBee Shell are solely the Owner's responsibility.
+            RushBee is not accountable for:
+          </p>
+          <ul className="list-disc list-inside space-y-1 text-zinc-300 mt-2">
+            <li>Copyright violations or licensing issues related to games</li>
+            <li>Inappropriate or unauthorized content</li>
+            <li>Game performance, bugs, or compatibility issues</li>
+            <li>Any legal liabilities arising from the games or applications used</li>
+          </ul>
+
+          <h4 className="text-lg font-semibold text-zinc-100 mb-3">
+            8.3 Security and System Integrity
+          </h4>
+          <p className="text-zinc-300">
+            RushBee is not accountable for security breaches, hacking attempts,
+            or unauthorized access to PCs that may result in:
+          </p>
+          <ul className="list-disc list-inside space-y-1 text-zinc-300 mt-2">
+            <li>Corrupted Shell files or application data</li>
+            <li>Compromised system integrity</li>
+            <li>Data theft or unauthorized modifications</li>
+            <li>Malware, viruses, or other security threats</li>
+          </ul>
+          <p className="text-zinc-300 mt-2">
+            Owners are responsible for implementing appropriate security measures,
+            including firewalls, antivirus software, and regular system updates.
+          </p>
         </>
       ),
     },
@@ -568,11 +617,46 @@ const TermsAndCondition = () => {
             but not limited to trademarks, logos, design, code, and
             documentation, are owned by CLUTCHCRAFT SOLUTIONS LLP.
           </p>
-          <p className="text-zinc-300">
+          <p className="mb-4 text-zinc-300">
             Your subscription grants you a limited, non-exclusive,
             non-transferable license to use the software for your gaming cafe
             business operations. This license does not transfer any ownership
             rights to you.
+          </p>
+
+          <h4 className="text-lg font-semibold text-zinc-100 mb-3">
+            12.1 License Key Usage
+          </h4>
+          <div className="bg-amber-900/20 border border-amber-700/50 rounded-lg p-4 mb-4">
+            <p className="text-zinc-300 mb-2">
+              <strong className="text-amber-400">Important:</strong> Each Shell
+              license key is unique and designated for use on a single PC only.
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-zinc-300">
+              <li>
+                The same license key <strong>cannot be used</strong> on multiple PCs
+              </li>
+              <li>
+                Unauthorized sharing or duplication of license keys is strictly
+                prohibited
+              </li>
+              <li>
+                Each PC requires its own unique license key as per your
+                subscription plan
+              </li>
+            </ul>
+          </div>
+          <p className="text-zinc-300">
+            If you require new license keys (for PC replacements, hardware changes,
+            or other legitimate reasons), you must contact us at{" "}
+            <a
+              href="mailto:contact@rushbeegaming.com"
+              className="text-amber-400 hover:text-amber-300"
+            >
+              contact@rushbeegaming.com
+            </a>{" "}
+            with a detailed explanation of why new license keys are needed. License
+            key requests will be reviewed on a case-by-case basis.
           </p>
         </>
       ),

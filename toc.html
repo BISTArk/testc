@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - RushBee Cntrl & Shell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #09090b;
+            color: #fafafa;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(9, 9, 11, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #27272a;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(to bottom right, #fbbf24, #d97706);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #18181b;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fafafa;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #a1a1aa;
+        }
+
+        .visit-btn {
+            padding: 0.5rem 1rem;
+            background-color: #f59e0b;
+            color: #18181b;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: background-color 0.2s;
+        }
+
+        .visit-btn:hover {
+            background-color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #18181b, #09090b);
+            border-bottom: 1px solid #27272a;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: #a1a1aa;
+            max-width: 42rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: #71717a;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            background-color: rgba(24, 24, 27, 0.5);
+            border-bottom: 1px solid #27272a;
+            padding: 2rem 0;
+        }
+
+        .toc-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+        }
+
+        .toc-link:hover {
+            color: #fbbf24;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #27272a;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #fafafa;
+            margin-bottom: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #d4d4d8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            color: #d4d4d8;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #fafafa;
+            font-weight: 600;
+        }
+
+        a {
+            color: #fbbf24;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fcd34d;
+        }
+
+        /* Alert Boxes */
+        .alert {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .alert-important {
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+        }
+
+        .alert-warning {
+            background-color: rgba(127, 29, 29, 0.2);
+            border: 1px solid rgba(185, 28, 28, 0.5);
+        }
+
+        .alert-amber {
+            background-color: rgba(120, 53, 15, 0.2);
+            border: 1px solid rgba(180, 83, 9, 0.5);
+        }
+
+        .alert-success {
+            background-color: rgba(6, 78, 59, 0.2);
+            border: 1px solid rgba(4, 120, 87, 0.5);
+        }
+
+        .text-amber {
+            color: #fbbf24;
+        }
+
+        .text-red {
+            color: #f87171;
+        }
+
+        .text-emerald {
+            color: #34d399;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card {
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .card-emerald {
+            border-color: rgba(4, 120, 87, 0.5);
+        }
+
+        .support-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-circle {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-amber {
+            background-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .icon-emerald {
+            background-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .icon-zinc {
+            background-color: rgba(161, 161, 170, 0.2);
+        }
+
+        /* Agreement Section */
+        .agreement-section {
+            margin-top: 4rem;
+            background: linear-gradient(to right, rgba(245, 158, 11, 0.1), rgba(217, 119, 6, 0.1));
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .agreement-section h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #18181b;
+            border-top: 1px solid #27272a;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(to bottom right, #fbbf24, #d97706);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #18181b;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a {
+            color: #a1a1aa;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #fbbf24;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">R</div>
+                    <div class="logo-text">
+                        <h1>RushBee</h1>
+                        <p>Cntrl & Shell</p>
+                    </div>
+                </div>
+                <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Terms and Conditions</h1>
+            <p class="hero-desc">
+                Please read these terms carefully before using RushBee Cntrl and Shell gaming cafe management software.
+            </p>
+            <div class="hero-meta">
+                <span>📅 Effective Date: 27 December 2025</span>
+                <span>🔄 Last Updated: 27 December 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <h2 class="toc-title">Table of Contents</h2>
+            <nav class="toc-grid">
+                <a href="#introduction" class="toc-link">1. Introduction</a>
+                <a href="#definitions" class="toc-link">2. Definitions</a>
+                <a href="#services" class="toc-link">3. Services Provided</a>
+                <a href="#subscription" class="toc-link">4. Subscription and Pricing</a>
+                <a href="#payment" class="toc-link">5. Payment Terms</a>
+                <a href="#refunds" class="toc-link">6. Refund Policy</a>
+                <a href="#support" class="toc-link">7. Customer Support</a>
+                <a href="#liability" class="toc-link">8. Limitation of Liability</a>
+                <a href="#data" class="toc-link">9. Data Collection and Privacy</a>
+                <a href="#usage" class="toc-link">10. Acceptable Use Policy</a>
+                <a href="#termination" class="toc-link">11. Termination</a>
+                <a href="#intellectual" class="toc-link">12. Intellectual Property</a>
+                <a href="#modifications" class="toc-link">13. Modifications to Terms</a>
+                <a href="#governing" class="toc-link">14. Governing Law and Jurisdiction</a>
+                <a href="#contact" class="toc-link">15. Contact Information</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- 1. Introduction -->
+            <section id="introduction" class="content-section">
+                <h2>1. Introduction</h2>
+                <p>
+                    Welcome to <strong>RushBee Cntrl</strong> and <strong>RushBee Shell</strong> (collectively referred to as
+                    "RushBee", "Software", "Service", "we", "us", or "our"). These Terms and Conditions ("Terms") govern your access to and use of our gaming
+                    cafe management software solutions.
+                </p>
+                <p>
+                    RushBee is owned and operated by <strong>CLUTCHCRAFT SOLUTIONS LLP</strong>, a Limited Liability
+                    Partnership registered under the Ministry of Corporate Affairs (MCA), Government of India.
+                </p>
+                <div class="alert alert-important">
+                    <p class="text-sm">
+                        <strong class="text-amber">Important:</strong> By registering, logging in, or using RushBee Cntrl or Shell, you
+                        acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these Terms,
+                        you must not use our Software.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. Definitions -->
+            <section id="definitions" class="content-section">
+                <h2>2. Definitions</h2>
+                <ul>
+                    <li>
+                        <strong>"RushBee Cntrl"</strong> - A web-based application designed for desktop use, providing gaming
+                        cafe owners with comprehensive management tools including PC control, bookings, sessions, inventory, food management, Shell
+                        settings, analytics, invoicing, and user management.
+                    </li>
+                    <li>
+                        <strong>"RushBee Shell"</strong> - A lightweight client application installed on gaming cafe PCs,
+                        providing gamers with a kiosk-mode gaming library to access games and applications permitted by the cafe owner.
+                    </li>
+                    <li>
+                        <strong>"Owner"</strong> - The gaming cafe proprietor or authorized representative who subscribes to and
+                        administers the RushBee Software.
+                    </li>
+                    <li>
+                        <strong>"User"</strong> - End customers (gamers) who use the gaming cafe PCs managed by RushBee.
+                    </li>
+                    <li>
+                        <strong>"Subscription"</strong> - The paid access to RushBee services based on the number of PCs managed.
+                    </li>
+                    <li>
+                        <strong>"Entitlements"</strong> - The features and services included in your subscription plan.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 3. Services Provided -->
+            <section id="services" class="content-section">
+                <h2>3. Services Provided</h2>
+                <h4>3.1 RushBee Cntrl Features</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>PC Control (shutdown, restart, lock, unlock)</li>
+                    <li>Booking and Session Management</li>
+                    <li>Inventory Management</li>
+                    <li>Food and Beverage Management</li>
+                    <li>Shell Settings Configuration</li>
+                    <li>Business Analytics and Reports</li>
+                    <li>Invoice Generation</li>
+                    <li>User and Staff Management</li>
+                </ul>
+
+                <h4>3.2 RushBee Shell Features</h4>
+                <ul style="margin-left: 1rem;">
+                    <li>Kiosk-mode gaming library interface</li>
+                    <li>Owner-controlled application access</li>
+                    <li>Session tracking and management</li>
+                    <li>Secure gaming environment</li>
+                </ul>
+
+                <p>
+                    For more information about our services, please visit 
+                    <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">pos.rushbeegaming.com</a>
+                </p>
+            </section>
+
+            <!-- 4. Subscription and Pricing -->
+            <section id="subscription" class="content-section">
+                <h2>4. Subscription and Pricing</h2>
+                <h4>4.1 Subscription Model</h4>
+                <p>
+                    RushBee operates on a subscription-based model where pricing is determined by the number of PCs managed through our software. We
+                    offer two billing cycles:
+                </p>
+                <div class="grid-2">
+                    <div class="card">
+                        <h5 class="text-amber">Monthly Subscription</h5>
+                        <p class="text-sm">Pay month-to-month with flexibility to cancel. Standard pricing applies.</p>
+                    </div>
+                    <div class="card card-emerald">
+                        <h5 class="text-emerald">Yearly Subscription</h5>
+                        <p class="text-sm">Pay annually and receive <strong>2 months free</strong> (equivalent to 17% savings).</p>
+                    </div>
+                </div>
+
+                <h4>4.2 Setup and Installation</h4>
+                <ul>
+                    <li><strong>No Setup Fee:</strong> There are no initial setup fees. Owners are responsible for self-installation.</li>
+                    <li><strong>Documentation:</strong> Comprehensive documentation and video tutorials are provided for self-setup.</li>
+                    <li><strong>Support:</strong> Our support team is available to assist with any issues during setup.</li>
+                    <li><strong>Professional Setup (Optional):</strong> If you require the RushBee team to perform setup, additional charges of up to <strong>₹500 INR per PC</strong> will apply, depending on location.</li>
+                </ul>
+
+                <h4>4.3 Additional Seats and PC Expansion</h4>
+                <p style="margin-bottom: 1rem;">
+                    If you need to add extra seats beyond the number of PCs defined in your current subscription plan, additional costs will be charged per PC.
+                    Please contact our support team at 
+                    <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a> 
+                    to upgrade your subscription and obtain pricing for additional seats.
+                </p>
+
+                <h4>4.4 Price Changes</h4>
+                <p>
+                    Subscription prices are subject to change annually, typically ranging from <strong>10-12%</strong> increase. In the event of
+                    significant increases in cloud service costs, additional price adjustments may be necessary. You will be notified 
+                    <strong>at least 1 month in advance</strong> via email and WhatsApp before any price changes take effect.
+                </p>
+            </section>
+
+            <!-- 5. Payment Terms -->
+            <section id="payment" class="content-section">
+                <h2>5. Payment Terms</h2>
+                <h4>5.1 Payment Obligation</h4>
+                <p>
+                    Owners are required to pay subscription fees on time for continued access to RushBee services. Payments must be made before the start
+                    of each billing cycle.
+                </p>
+
+                <h4>5.2 Grace Period</h4>
+                <div class="alert alert-warning">
+                    <p>
+                        A grace period of <strong class="text-red">3 days</strong> is provided for late payments. After this grace period:
+                    </p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>All entitlements will be disabled</li>
+                        <li>Owner access will be suspended</li>
+                        <li>Booking and session management will be unavailable</li>
+                        <li>Shell client functionality will be restricted</li>
+                    </ul>
+                </div>
+                <p>To restore services, the outstanding balance must be cleared in full.</p>
+            </section>
+
+            <!-- 6. Refund Policy -->
+            <section id="refunds" class="content-section">
+                <h2>6. Refund Policy</h2>
+                <h4>6.1 Eligibility for Refund</h4>
+                <p>Refunds may be issued under the following conditions:</p>
+                <ul>
+                    <li>Software fails to operate under normal business conditions</li>
+                    <li>Persistent glitches that prevent proper usage</li>
+                    <li>Frequent crashes affecting business operations</li>
+                </ul>
+
+                <h4>6.2 Refund Request Process</h4>
+                <div class="alert alert-amber">
+                    <p style="margin-bottom: 0.5rem;">
+                        <strong class="text-amber">Time Limit: 7 Days</strong>
+                    </p>
+                    <p class="text-sm">
+                        Refund requests must be submitted within <strong>7 days</strong> of experiencing the issue. Requests made
+                        after this period will not be entertained.
+                    </p>
+                </div>
+
+                <h4>6.3 How to Request a Refund</h4>
+                <p style="margin-bottom: 0.5rem;">
+                    Send an email to <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a> with:
+                </p>
+                <ul>
+                    <li>Your registered email and cafe name</li>
+                    <li>Detailed description of the issues faced</li>
+                    <li>Supporting screenshots or screen recordings</li>
+                    <li>Any relevant documents or error logs</li>
+                </ul>
+            </section>
+
+            <!-- 7. Customer Support -->
+            <section id="support" class="content-section">
+                <h2>7. Customer Support</h2>
+                <h4>7.1 Support Availability</h4>
+                <p>
+                    Our support team operates <strong>24/7</strong>; however, support allocation is based on the availability of support team members.
+                    Response times may vary depending on the volume of requests and complexity of issues.
+                </p>
+
+                <h4>7.2 Support Channels</h4>
+                <div class="support-card">
+                    <div class="icon-circle icon-amber">
+                        <span class="text-amber">✉️</span>
+                    </div>
+                    <div>
+                        <p class="text-sm" style="color: #a1a1aa; margin-bottom: 0.25rem;">Email</p>
+                        <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a>
+                        <span style="color: #71717a; margin: 0 0.5rem;">|</span>
+                        <a href="mailto:rushbeegamingapp@gmail.com">rushbeegamingapp@gmail.com</a>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div class="icon-circle icon-emerald">
+                        <span class="text-emerald">📞</span>
+                    </div>
+                    <div>
+                        <p class="text-sm" style="color: #a1a1aa; margin-bottom: 0.25rem;">Phone / WhatsApp</p>
+                        <a href="tel:+916364135086" class="text-emerald">+91 6364 135 086</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. Limitation of Liability -->
+            <section id="liability" class="content-section">
+                <h2>8. Limitation of Liability</h2>
+                <div class="alert alert-warning">
+                    <h4 class="text-red">Important Disclaimer</h4>
+                    <p>
+                        To the maximum extent permitted by applicable law, CLUTCHCRAFT SOLUTIONS LLP and RushBee shall not be held liable for:
+                    </p>
+                    <ul>
+                        <li>Any bugs, glitches, or technical issues that may cause business harm, loss of revenue, or operational disruption</li>
+                        <li>Data loss resulting from system failures, unless caused by gross negligence on our part</li>
+                        <li>Indirect, incidental, special, consequential, or punitive damages</li>
+                        <li>Loss of profits, goodwill, use, or data arising from or related to the use of our Software</li>
+                    </ul>
+                </div>
+
+                <h4>8.1 Bug Reporting and Resolution</h4>
+                <p>We are committed to maintaining software quality. If you encounter any bugs or issues:</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Report the issue promptly through our support channels</li>
+                    <li>We will investigate and attempt to fix reported issues in a timely manner</li>
+                    <li>Critical bugs affecting operations will be prioritized</li>
+                </ul>
+
+                <h4>8.2 Game Content Disclaimer</h4>
+                <p>
+                    Any games or applications added by the Owner in RushBee Cntrl and displayed in RushBee Shell are solely the Owner's responsibility.
+                    RushBee is not accountable for:
+                </p>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Copyright violations or licensing issues related to games</li>
+                    <li>Inappropriate or unauthorized content</li>
+                    <li>Game performance, bugs, or compatibility issues</li>
+                    <li>Any legal liabilities arising from the games or applications used</li>
+                </ul>
+
+                <h4>8.3 Security and System Integrity</h4>
+                <p>
+                    RushBee is not accountable for security breaches, hacking attempts, or unauthorized access to PCs that may result in:
+                </p>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Corrupted Shell files or application data</li>
+                    <li>Compromised system integrity</li>
+                    <li>Data theft or unauthorized modifications</li>
+                    <li>Malware, viruses, or other security threats</li>
+                </ul>
+                <p style="margin-top: 0.5rem;">
+                    Owners are responsible for implementing appropriate security measures, including firewalls, antivirus software, and regular system updates.
+                </p>
+            </section>
+
+            <!-- 9. Data Collection and Privacy -->
+            <section id="data" class="content-section">
+                <h2>9. Data Collection and Privacy</h2>
+                <h4>9.1 Data We Collect</h4>
+                <p>To provide our services, we collect and store the following data as added by the Owner:</p>
+                <ul>
+                    <li>Owner account information and business details</li>
+                    <li>User (gamer) profiles and session data</li>
+                    <li>Transaction and booking records</li>
+                    <li>Food and beverage item details</li>
+                    <li>Rate and pass configurations</li>
+                    <li>Application lists and PC usage data</li>
+                    <li>Live application monitoring data</li>
+                </ul>
+
+                <h4>9.2 Data Security</h4>
+                <div class="alert alert-success">
+                    <p>
+                        <strong class="text-emerald">Password Protection:</strong> All user passwords are encrypted. We do not store raw/plain-text passwords.
+                    </p>
+                </div>
+                <p>For additional data encryption beyond passwords, extra charges will apply. Contact us for enterprise security options.</p>
+
+                <h4>9.3 Data Storage Location</h4>
+                <p>All data is stored on secure servers located in <strong>Mumbai, India</strong>.</p>
+
+                <h4>9.4 Third-Party Data Sharing</h4>
+                <p>
+                    We do <strong>not</strong> share your data with any third-party applications or services. All collected data is used exclusively for
+                    providing the RushBee service and generating business analytics for the Owner.
+                </p>
+            </section>
+
+            <!-- 10. Acceptable Use Policy -->
+            <section id="usage" class="content-section">
+                <h2>10. Acceptable Use Policy</h2>
+                <h4>10.1 Permitted Use</h4>
+                <p>
+                    RushBee software is intended solely for legitimate gaming cafe management operations. Owners agree to use the software in
+                    compliance with all applicable laws and regulations.
+                </p>
+
+                <h4>10.2 Prohibited Activities</h4>
+                <p style="margin-bottom: 0.5rem;">The following uses of RushBee are strictly prohibited:</p>
+                <ul>
+                    <li>Facilitating illegal gambling or betting activities</li>
+                    <li>Distribution of pirated games, software, or copyrighted content</li>
+                    <li>Any activities that violate local, state, or national laws</li>
+                    <li>Attempting to reverse engineer, decompile, or modify the software</li>
+                    <li>Sharing login credentials with unauthorized parties</li>
+                    <li>Using the software for any illegal or unethical purposes</li>
+                </ul>
+
+                <div class="alert alert-warning">
+                    <p>
+                        <strong class="text-red">Warning:</strong> Violation of these terms may result in immediate termination of your
+                        subscription without refund.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 11. Termination -->
+            <section id="termination" class="content-section">
+                <h2>11. Termination</h2>
+                <h4>11.1 Termination by Owner</h4>
+                <p>
+                    Owners may cancel their subscription at any time. For monthly subscriptions, cancellation will take effect at the end of the
+                    current billing period. For yearly subscriptions, please contact our support team to discuss cancellation options.
+                </p>
+
+                <h4>11.2 Termination by RushBee</h4>
+                <p style="margin-bottom: 0.5rem;">We reserve the right to suspend or terminate your access to RushBee services if:</p>
+                <ul>
+                    <li>Payment is not received within the grace period</li>
+                    <li>You violate these Terms and Conditions</li>
+                    <li>You engage in prohibited activities</li>
+                    <li>Required by law or legal process</li>
+                </ul>
+
+                <h4>11.3 Effect of Termination</h4>
+                <p>
+                    Upon termination, access to RushBee Cntrl and Shell will be disabled. Owners may request an export of their data within 30 days
+                    of termination by contacting our support team.
+                </p>
+            </section>
+
+            <!-- 12. Intellectual Property -->
+            <section id="intellectual" class="content-section">
+                <h2>12. Intellectual Property</h2>
+                <p>
+                    All intellectual property rights in the RushBee software, including but not limited to trademarks, logos, design, code, and
+                    documentation, are owned by CLUTCHCRAFT SOLUTIONS LLP.
+                </p>
+                <p>
+                    Your subscription grants you a limited, non-exclusive, non-transferable license to use the software for your gaming cafe
+                    business operations. This license does not transfer any ownership rights to you.
+                </p>
+
+                <h4>12.1 License Key Usage</h4>
+                <div class="alert alert-amber">
+                    <p style="margin-bottom: 0.5rem;">
+                        <strong class="text-amber">Important:</strong> Each Shell license key is unique and designated for use on a single PC only.
+                    </p>
+                    <ul>
+                        <li>The same license key <strong>cannot be used</strong> on multiple PCs</li>
+                        <li>Unauthorized sharing or duplication of license keys is strictly prohibited</li>
+                        <li>Each PC requires its own unique license key as per your subscription plan</li>
+                    </ul>
+                </div>
+                <p>
+                    If you require new license keys (for PC replacements, hardware changes, or other legitimate reasons), you must contact us at 
+                    <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a> 
+                    with a detailed explanation of why new license keys are needed. License key requests will be reviewed on a case-by-case basis.
+                </p>
+            </section>
+
+            <!-- 13. Modifications to Terms -->
+            <section id="modifications" class="content-section">
+                <h2>13. Modifications to Terms</h2>
+                <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be communicated via:</p>
+                <ul>
+                    <li>Email notification to registered email address</li>
+                    <li>WhatsApp notification</li>
+                    <li>In-app notification within RushBee Cntrl</li>
+                </ul>
+                <p>Continued use of the software after notification of changes constitutes acceptance of the modified terms.</p>
+            </section>
+
+            <!-- 14. Governing Law and Jurisdiction -->
+            <section id="governing" class="content-section">
+                <h2>14. Governing Law and Jurisdiction</h2>
+                <p>These Terms and Conditions shall be governed by and construed in accordance with the laws of India.</p>
+                <p>
+                    Any disputes arising out of or in connection with these Terms shall be subject to the exclusive jurisdiction of the courts in 
+                    <strong>Bangalore, Karnataka, India</strong>.
+                </p>
+            </section>
+
+            <!-- 15. Contact Information -->
+            <section id="contact" class="content-section">
+                <h2>15. Contact Information</h2>
+                <p>For any questions, concerns, or requests regarding these Terms and Conditions, please contact us:</p>
+                <div class="card" style="padding: 1.5rem;">
+                    <h5 class="text-amber" style="margin-bottom: 1rem;">CLUTCHCRAFT SOLUTIONS LLP</h5>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">📍</div>
+                            <p style="margin: 0;">
+                                138, SLN Nivas, Kadabagere,<br>
+                                Bangalore, Karnataka, India
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">✉️</div>
+                            <div>
+                                <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a>
+                                <span style="color: #71717a; margin: 0 0.5rem;">|</span>
+                                <a href="mailto:rushbeegamingapp@gmail.com">rushbeegamingapp@gmail.com</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">📞</div>
+                            <a href="tel:+916364135086">+91 6364 135 086</a>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">🌐</div>
+                            <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer">pos.rushbeegaming.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Agreement Section -->
+            <section class="agreement-section">
+                <h3>Acceptance of Terms</h3>
+                <p style="max-width: 42rem; margin: 0 auto;">
+                    By registering for an account, logging into RushBee Cntrl, or installing RushBee Shell on your gaming cafe PCs, you acknowledge
+                    that you have read, understood, and agree to be bound by these Terms and Conditions.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">R</div>
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #d4d4d8; margin-bottom: 0.125rem;">RushBee Gaming</p>
+                        <p style="font-size: 0.75rem; color: #71717a; margin: 0;">© 2025 CLUTCHCRAFT SOLUTIONS LLP</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer">Website</a>
+                    <a href="mailto:contact@rushbeegaming.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
