@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - RushBee Cntrl & Shell</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #09090b;
+            color: #fafafa;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 56rem;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: rgba(9, 9, 11, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #27272a;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(to bottom right, #fbbf24, #d97706);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #18181b;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #fafafa;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #a1a1aa;
+        }
+
+        .visit-btn {
+            padding: 0.5rem 1rem;
+            background-color: #f59e0b;
+            color: #18181b;
+            font-weight: 500;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: background-color 0.2s;
+        }
+
+        .visit-btn:hover {
+            background-color: #fbbf24;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #18181b, #09090b);
+            border-bottom: 1px solid #27272a;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero-icon {
+            width: 4rem;
+            height: 4rem;
+            background-color: rgba(16, 185, 129, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.25rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: #a1a1aa;
+            max-width: 42rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            font-size: 0.875rem;
+            color: #71717a;
+        }
+
+        .hero-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Table of Contents */
+        .toc-section {
+            background-color: rgba(24, 24, 27, 0.5);
+            border-bottom: 1px solid #27272a;
+            padding: 2rem 0;
+        }
+
+        .toc-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.5rem;
+        }
+
+        .toc-link {
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 0.875rem;
+            padding: 0.25rem 0;
+            transition: color 0.2s;
+        }
+
+        .toc-link:hover {
+            color: #fbbf24;
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        .content-section {
+            margin-bottom: 3rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #27272a;
+        }
+
+        h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #fafafa;
+            margin-bottom: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        h5 {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: #d4d4d8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            list-style-type: disc;
+            color: #d4d4d8;
+            margin-bottom: 1rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        strong {
+            color: #fafafa;
+            font-weight: 600;
+        }
+
+        a {
+            color: #fbbf24;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #fcd34d;
+        }
+
+        /* Alert Boxes */
+        .alert {
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .alert-important {
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+        }
+
+        .alert-warning {
+            background-color: rgba(127, 29, 29, 0.2);
+            border: 1px solid rgba(185, 28, 28, 0.5);
+        }
+
+        .alert-amber {
+            background-color: rgba(120, 53, 15, 0.2);
+            border: 1px solid rgba(180, 83, 9, 0.5);
+        }
+
+        .alert-success {
+            background-color: rgba(6, 78, 59, 0.2);
+            border: 1px solid rgba(4, 120, 87, 0.5);
+        }
+
+        .text-amber {
+            color: #fbbf24;
+        }
+
+        .text-red {
+            color: #f87171;
+        }
+
+        .text-emerald {
+            color: #34d399;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+        }
+
+        /* Card */
+        .card {
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .support-card {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: rgba(24, 24, 27, 0.5);
+            border: 1px solid #3f3f46;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .icon-circle {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon-amber {
+            background-color: rgba(245, 158, 11, 0.2);
+        }
+
+        .icon-emerald {
+            background-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .icon-zinc {
+            background-color: rgba(161, 161, 170, 0.2);
+        }
+
+        /* Summary Section */
+        .summary-section {
+            margin-top: 4rem;
+            background: linear-gradient(to right, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.1));
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .summary-section h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #34d399;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #18181b;
+            border-top: 1px solid #27272a;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .footer-logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(to bottom right, #fbbf24, #d97706);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #18181b;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a {
+            color: #a1a1aa;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #fbbf24;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">R</div>
+                    <div class="logo-text">
+                        <h1>RushBee</h1>
+                        <p>Cntrl & Shell</p>
+                    </div>
+                </div>
+                <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer" class="visit-btn">
+                    Visit Website
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-icon">🛡️</div>
+            <h1>Privacy Policy</h1>
+            <p class="hero-desc">
+                Your privacy is important to us. This policy explains how we collect, use, and protect your data when using RushBee Cntrl and Shell.
+            </p>
+            <div class="hero-meta">
+                <span>📅 Effective Date: 27 December 2025</span>
+                <span>🔄 Last Updated: 27 December 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="toc-section">
+        <div class="container">
+            <h2 class="toc-title">Table of Contents</h2>
+            <nav class="toc-grid">
+                <a href="#introduction" class="toc-link">1. Introduction</a>
+                <a href="#definitions" class="toc-link">2. Definitions</a>
+                <a href="#data-collection" class="toc-link">3. Information We Collect</a>
+                <a href="#cookies" class="toc-link">4. Cookies and Authentication</a>
+                <a href="#data-use" class="toc-link">5. How We Use Your Information</a>
+                <a href="#payment" class="toc-link">6. Payment Information</a>
+                <a href="#data-sharing" class="toc-link">7. Data Sharing and Disclosure</a>
+                <a href="#data-storage" class="toc-link">8. Data Storage and Security</a>
+                <a href="#data-retention" class="toc-link">9. Data Retention</a>
+                <a href="#user-rights" class="toc-link">10. Your Rights</a>
+                <a href="#communications" class="toc-link">11. Communications and Marketing</a>
+                <a href="#children" class="toc-link">12. Children's Privacy</a>
+                <a href="#geographic" class="toc-link">13. Geographic Scope</a>
+                <a href="#changes" class="toc-link">14. Changes to This Privacy Policy</a>
+                <a href="#contact" class="toc-link">15. Contact Us</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- 1. Introduction -->
+            <section id="introduction" class="content-section">
+                <h2>1. Introduction</h2>
+                <p>
+                    Welcome to the Privacy Policy of <strong>RushBee Cntrl</strong> and <strong>RushBee Shell</strong> (collectively referred to as
+                    "RushBee", "Software", "Service", "we", "us", or "our").
+                </p>
+                <p>
+                    RushBee is owned and operated by <strong>CLUTCHCRAFT SOLUTIONS LLP</strong>, a Limited Liability
+                    Partnership registered under the Ministry of Corporate Affairs (MCA), Government of India, located at 138, SLN Nivas, Kadabagere,
+                    Bangalore, Karnataka, India.
+                </p>
+                <p>
+                    This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our gaming cafe management
+                    software. Please read this policy carefully to understand our practices regarding your data.
+                </p>
+                <div class="alert alert-important">
+                    <p class="text-sm">
+                        <strong class="text-amber">Acceptance:</strong> By registering, logging in, or using RushBee Cntrl or Shell, you
+                        consent to the data practices described in this Privacy Policy. If you do not agree with this policy, please do not use our services.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 2. Definitions -->
+            <section id="definitions" class="content-section">
+                <h2>2. Definitions</h2>
+                <ul>
+                    <li><strong>"Owner"</strong> - The gaming cafe proprietor or authorized representative who subscribes to and administers the RushBee Software.</li>
+                    <li><strong>"User"</strong> - End customers (gamers) whose profiles and session data are managed through RushBee by the Owner.</li>
+                    <li><strong>"Personal Data"</strong> - Any information that can be used to identify an individual, such as name, email address, phone number, etc.</li>
+                    <li><strong>"Usage Data"</strong> - Data collected automatically, such as session information, booking records, and transaction logs.</li>
+                </ul>
+            </section>
+
+            <!-- 3. Information We Collect -->
+            <section id="data-collection" class="content-section">
+                <h2>3. Information We Collect</h2>
+                
+                <h4>3.1 Information Provided by Owners</h4>
+                <p>When Owners register and use RushBee Cntrl, we collect information that is voluntarily provided, including:</p>
+                <ul style="margin-left: 1rem;">
+                    <li>Owner account information (name, email, phone number)</li>
+                    <li>Business details (cafe name, address)</li>
+                    <li>Zone and PC configuration details</li>
+                    <li>Rate cards and pass configurations</li>
+                    <li>Food and beverage item details</li>
+                    <li>Application lists for Shell</li>
+                </ul>
+
+                <h4>3.2 User Data (Managed by Owners)</h4>
+                <p>Owners add and manage User (gamer) data through RushBee Cntrl. This data may include:</p>
+                <ul style="margin-left: 1rem;">
+                    <li>User profiles (name, contact details)</li>
+                    <li>Session and booking records</li>
+                    <li>Transaction history and ledger entries</li>
+                    <li>Wallet balances and payment records</li>
+                </ul>
+                <div class="alert alert-amber">
+                    <p class="text-sm">
+                        <strong class="text-amber">Note:</strong> User data is added and managed by the Owner. RushBee acts as a data processor
+                        on behalf of the Owner, who is the data controller for their customers' information.
+                    </p>
+                </div>
+
+                <h4>3.3 Device and Technical Information</h4>
+                <p>To provide our services, we collect certain technical information:</p>
+                <ul style="margin-left: 1rem;">
+                    <li><strong>MAC Address:</strong> Stored and used to uniquely identify PCs running RushBee Shell</li>
+                    <li><strong>IP Address:</strong> Stored only if manually added by the Owner for PC identification</li>
+                    <li><strong>Zone Details:</strong> PC grouping and zone configurations as set by the Owner</li>
+                </ul>
+                <div class="alert alert-success">
+                    <p>
+                        <strong class="text-emerald">PC Specifications:</strong> PC hardware specifications (CPU, RAM, GPU, etc.) are fetched live
+                        via PowerShell for display purposes only and are <strong>not stored</strong> in our databases or servers.
+                    </p>
+                </div>
+
+                <h4>3.4 Session and Transaction Data</h4>
+                <p>We store operational data necessary for the functioning of your gaming cafe:</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Session start and end times</li>
+                    <li>Booking records and schedules</li>
+                    <li>Transaction ledgers and invoices</li>
+                    <li>Inventory transactions</li>
+                    <li>Food and beverage orders</li>
+                </ul>
+            </section>
+
+            <!-- 4. Cookies and Authentication -->
+            <section id="cookies" class="content-section">
+                <h2>4. Cookies and Authentication</h2>
+                
+                <h4>4.1 Cookies We Use</h4>
+                <p>RushBee Cntrl uses cookies to maintain your login session and enhance your experience. The cookies we use include:</p>
+                <div class="card" style="margin-bottom: 1rem;">
+                    <h5 class="text-amber">Essential/Authentication Cookies</h5>
+                    <ul class="text-sm" style="margin-top: 0.5rem;">
+                        <li><strong>Entitlements:</strong> Stores your subscription and feature access information</li>
+                        <li><strong>Auth Tokens:</strong> Maintains your login session so you don't have to log in repeatedly</li>
+                    </ul>
+                </div>
+                <p>
+                    These cookies are strictly necessary for the operation of RushBee Cntrl and cannot be disabled. They allow you to remain logged in for as long as you choose.
+                </p>
+
+                <h4>4.2 Third-Party Analytics</h4>
+                <p>
+                    We use basic website traffic monitoring for our marketing website. However, <strong>no login/logout sessions are tracked</strong>, and 
+                    <strong>no user activity data is stored or shared</strong> with third-party analytics services. We do not use any third-party analytics tools within the RushBee Cntrl or Shell applications.
+                </p>
+            </section>
+
+            <!-- 5. How We Use Your Information -->
+            <section id="data-use" class="content-section">
+                <h2>5. How We Use Your Information</h2>
+                <p>We use the collected information for the following purposes:</p>
+                <ul>
+                    <li><strong>Service Delivery:</strong> To provide, maintain, and improve RushBee Cntrl and Shell functionality</li>
+                    <li><strong>Account Management:</strong> To manage your subscription, authenticate access, and process entitlements</li>
+                    <li><strong>Business Operations:</strong> To enable session tracking, bookings, inventory management, and invoicing</li>
+                    <li><strong>Customer Support:</strong> To respond to inquiries, troubleshoot issues, and provide technical assistance</li>
+                    <li><strong>Business Analytics:</strong> To generate reports and analytics exclusively for the Owner's business insights</li>
+                    <li><strong>Communications:</strong> To send important service updates, billing reminders, and promotional messages</li>
+                    <li><strong>Security:</strong> To detect, prevent, and address technical issues, fraud, or security breaches</li>
+                </ul>
+            </section>
+
+            <!-- 6. Payment Information -->
+            <section id="payment" class="content-section">
+                <h2>6. Payment Information</h2>
+                
+                <h4>6.1 No Third-Party Payment Processing</h4>
+                <p>
+                    RushBee does not integrate with any third-party payment gateways or APIs. All payments between gaming cafe owners and their customers are handled independently by the Owner.
+                </p>
+
+                <h4>6.2 Ledger and Transaction Records</h4>
+                <p>We maintain transaction ledgers and records as entered by the Owner for their business tracking purposes. This includes:</p>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Session charges and payments</li>
+                    <li>Food and beverage transactions</li>
+                    <li>Wallet top-ups and balances</li>
+                    <li>Invoice records</li>
+                </ul>
+                <p style="margin-top: 1rem;">These records are stored securely and are accessible only to the respective Owner.</p>
+            </section>
+
+            <!-- 7. Data Sharing and Disclosure -->
+            <section id="data-sharing" class="content-section">
+                <h2>7. Data Sharing and Disclosure</h2>
+                
+                <h4>7.1 No Third-Party Sharing</h4>
+                <div class="alert alert-success">
+                    <p>
+                        <strong class="text-emerald">Our Commitment:</strong> We do <strong>not</strong> sell, trade, rent, or share your personal
+                        data or business information with any third-party applications, services, or advertisers.
+                    </p>
+                </div>
+
+                <h4>7.2 When We May Disclose Information</h4>
+                <p style="margin-bottom: 0.5rem;">We may disclose information only in the following circumstances:</p>
+                <ul>
+                    <li><strong>Legal Requirements:</strong> When required by law, court order, or government authority</li>
+                    <li><strong>Protection of Rights:</strong> To protect our rights, property, or safety, or that of our users</li>
+                    <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, or sale of assets, with notice to affected users</li>
+                    <li><strong>With Consent:</strong> When you have explicitly consented to the disclosure</li>
+                </ul>
+            </section>
+
+            <!-- 8. Data Storage and Security -->
+            <section id="data-storage" class="content-section">
+                <h2>8. Data Storage and Security</h2>
+                
+                <h4>8.1 Data Storage Location</h4>
+                <p>All data is stored on secure servers located in <strong>Mumbai, India</strong>. We use industry-standard security measures to protect your data.</p>
+
+                <h4>8.2 Security Measures</h4>
+                <ul>
+                    <li><strong>Password Encryption:</strong> All user passwords are encrypted. We do not store raw/plain-text passwords.</li>
+                    <li><strong>Secure Transmission:</strong> Data is transmitted using secure protocols (HTTPS)</li>
+                    <li><strong>Access Controls:</strong> Restricted access to data based on role and necessity</li>
+                </ul>
+                <div class="alert alert-amber">
+                    <p class="text-sm">
+                        <strong class="text-amber">Enterprise Security:</strong> For additional data encryption beyond passwords, extra charges apply. 
+                        Contact us at <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a> for enterprise security options.
+                    </p>
+                </div>
+
+                <h4>8.3 Security Limitations</h4>
+                <p>
+                    While we implement reasonable security measures, no method of transmission over the Internet or electronic storage is 100% secure.
+                    We cannot guarantee absolute security of your data. Owners are responsible for implementing appropriate security measures on their end,
+                    including firewalls, antivirus software, and regular system updates.
+                </p>
+            </section>
+
+            <!-- 9. Data Retention -->
+            <section id="data-retention" class="content-section">
+                <h2>9. Data Retention</h2>
+                
+                <h4>9.1 Retention Period</h4>
+                <p>
+                    We retain your data for as long as your account is active or as needed to provide you services. Currently, we do not have a specific
+                    data retention period for cancelled subscriptions. Your data remains in our systems until you request deletion.
+                </p>
+
+                <h4>9.2 Data After Subscription Cancellation</h4>
+                <p>
+                    If your subscription is cancelled or expires, your data will remain stored in our systems. If you wish to have your data permanently
+                    deleted, you must submit a deletion request (see Section 10 - Your Rights).
+                </p>
+            </section>
+
+            <!-- 10. Your Rights -->
+            <section id="user-rights" class="content-section">
+                <h2>10. Your Rights</h2>
+                
+                <h4>10.1 Right to Access and Export Data</h4>
+                <p>Owners have the right to access and export their data at any time. RushBee Cntrl provides built-in data export functionality:</p>
+                <ul>
+                    <li>Export user data, sessions, bookings, and inventory transactions</li>
+                    <li>Apply filters to customize your export</li>
+                    <li>Data is provided in CSV format for easy use</li>
+                </ul>
+
+                <h4>10.2 Right to Deletion</h4>
+                <p>Owners have the right to request complete deletion of their account and all associated data.</p>
+                <div class="alert alert-warning">
+                    <p style="margin-bottom: 0.5rem;"><strong class="text-red">Account Deletion Process:</strong></p>
+                    <ul class="text-sm">
+                        <li>Send an email to <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a> requesting account deletion</li>
+                        <li>Include your registered email and cafe name</li>
+                        <li>Our team will verify your identity and process the request</li>
+                        <li>Upon acknowledgment, your POS and all related data will be <strong>permanently erased</strong></li>
+                        <li>This is not a soft delete - data cannot be recovered</li>
+                    </ul>
+                </div>
+
+                <h4>10.3 Right to Correction</h4>
+                <p>You can update or correct your account information at any time through RushBee Cntrl. For assistance with data corrections, contact our support team.</p>
+            </section>
+
+            <!-- 11. Communications and Marketing -->
+            <section id="communications" class="content-section">
+                <h2>11. Communications and Marketing</h2>
+                
+                <h4>11.1 Types of Communications</h4>
+                <p style="margin-bottom: 0.5rem;">We may send you:</p>
+                <ul>
+                    <li><strong>Service Communications:</strong> Important updates about your subscription, billing reminders, and system notifications (cannot be opted out)</li>
+                    <li><strong>Promotional Messages:</strong> Information about new features, offers, and updates</li>
+                </ul>
+
+                <h4>11.2 Opting Out of Promotional Messages</h4>
+                <p>You can opt out of promotional communications at any time by:</p>
+                <div class="support-card">
+                    <div class="icon-circle icon-emerald">
+                        <span class="text-emerald">💬</span>
+                    </div>
+                    <div>
+                        <p class="text-sm" style="color: #a1a1aa; margin-bottom: 0.25rem;">WhatsApp</p>
+                        <p style="margin: 0;">Reply to our WhatsApp messages requesting to opt out</p>
+                    </div>
+                </div>
+                <div class="support-card">
+                    <div class="icon-circle icon-amber">
+                        <span class="text-amber">✉️</span>
+                    </div>
+                    <div>
+                        <p class="text-sm" style="color: #a1a1aa; margin-bottom: 0.25rem;">Email</p>
+                        <p style="margin: 0;">Send an opt-out request to <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 12. Children's Privacy -->
+            <section id="children" class="content-section">
+                <h2>12. Children's Privacy</h2>
+                <p>
+                    RushBee Cntrl is designed for use by gaming cafe owners who are 18 years of age or older. We do not knowingly collect personal
+                    information directly from children.
+                </p>
+                <div class="alert alert-amber">
+                    <p>
+                        <strong class="text-amber">Owner Responsibility:</strong> The Owner is solely responsible for ensuring that appropriate
+                        games and applications are made available to Users of all ages. RushBee does not have a child mode feature, and the Owner must
+                        exercise discretion in managing content accessible through Shell.
+                    </p>
+                </div>
+                <p>
+                    If a parent or guardian becomes aware that their child has provided personal information through a gaming cafe using RushBee,
+                    they should contact the cafe Owner directly to address any concerns.
+                </p>
+            </section>
+
+            <!-- 13. Geographic Scope -->
+            <section id="geographic" class="content-section">
+                <h2>13. Geographic Scope</h2>
+                <p>RushBee services are currently available only within <strong>India</strong>. We do not serve customers outside of India at this time.</p>
+                <p>
+                    This Privacy Policy is governed by and construed in accordance with the laws of India, including the Information Technology Act, 2000
+                    and its associated rules. As we expand to other regions in the future, this policy will be updated to reflect applicable data protection regulations.
+                </p>
+            </section>
+
+            <!-- 14. Changes to This Privacy Policy -->
+            <section id="changes" class="content-section">
+                <h2>14. Changes to This Privacy Policy</h2>
+                <p>
+                    We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons.
+                </p>
+                <p>When we make changes, we will:</p>
+                <ul>
+                    <li>Update the "Last Updated" date at the top of this policy</li>
+                    <li>Notify you via email for significant changes</li>
+                    <li>Send WhatsApp notifications when applicable</li>
+                    <li>Provide in-app notifications within RushBee Cntrl</li>
+                </ul>
+                <p>Your continued use of RushBee after any changes indicates your acceptance of the updated Privacy Policy.</p>
+            </section>
+
+            <!-- 15. Contact Us -->
+            <section id="contact" class="content-section">
+                <h2>15. Contact Us</h2>
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                <div class="card" style="padding: 1.5rem;">
+                    <h5 class="text-amber" style="margin-bottom: 1rem;">CLUTCHCRAFT SOLUTIONS LLP</h5>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">📍</div>
+                            <p style="margin: 0;">
+                                138, SLN Nivas, Kadabagere,<br>
+                                Bangalore, Karnataka, India
+                            </p>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">✉️</div>
+                            <div>
+                                <a href="mailto:contact@rushbeegaming.com">contact@rushbeegaming.com</a>
+                                <span style="color: #71717a; margin: 0 0.5rem;">|</span>
+                                <a href="mailto:rushbeegamingapp@gmail.com">rushbeegamingapp@gmail.com</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">📞</div>
+                            <a href="tel:+916364135086">+91 6364 135 086</a>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="icon-circle icon-zinc">🌐</div>
+                            <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer">pos.rushbeegaming.com</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary Section -->
+            <section class="summary-section">
+                <h3>Your Privacy Matters</h3>
+                <p style="max-width: 42rem; margin: 0 auto;">
+                    We are committed to protecting your privacy and handling your data responsibly. We do not sell or share your data with third parties.
+                    If you have any questions about our privacy practices, please don't hesitate to contact us.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">R</div>
+                    <div>
+                        <p style="font-size: 0.875rem; font-weight: 500; color: #d4d4d8; margin-bottom: 0.125rem;">RushBee Gaming</p>
+                        <p style="font-size: 0.75rem; color: #71717a; margin: 0;">© 2025 CLUTCHCRAFT SOLUTIONS LLP</p>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="https://pos.rushbeegaming.com" target="_blank" rel="noopener noreferrer">Website</a>
+                    <a href="mailto:contact@rushbeegaming.com">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
